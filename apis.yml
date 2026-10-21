@@ -1,23 +1,66 @@
 aid: monzacloud
+
 name: Monza Cloud
-description: 'Monza Cloud is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://monzacloud.com/wp-content/uploads/2023/12/wqwq.png
+
+description: 'Monza Cloud provides end‑to‑end IT solutions, including cloud computing, AI and machine learning, custom web and mobile application development, IT infrastructure support, DevOps and automation, ERP application management, cybersecurity, and staff augmentation to businesses. It also offers the patented AZStudio platform and the Monza Work Suite, which deliver 40‑80% of a custom‑built application on Day One.'
+
 url: https://raw.githubusercontent.com/api-evangelist/monzacloud/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
-- Company
-apis: []
+- Cloud Computing
+- AI/ML
+- Custom Development
+- IT Infrastructure
+- DevOps
+- ERP Management
+- Cybersecurity
+- Staff Augmentation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/monzacloud-hosts.yml
+- type: DomainSecurity
+  url: security/monzacloud-domain-security.yml
 - type: Website
   url: https://monzacloud.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-21'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://monzacloud.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
